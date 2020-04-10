@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>wangka</title>
+      <link href="/2020/04/10/wangka/"/>
+      <url>/2020/04/10/wangka/</url>
+      
+        <content type="html"><![CDATA[<h2 id="针对-Broadcom-NetLink-TM-Gigabit-Ethernet-网卡经常性断网终极解决方案"><a href="#针对-Broadcom-NetLink-TM-Gigabit-Ethernet-网卡经常性断网终极解决方案" class="headerlink" title="针对 Broadcom NetLink (TM) Gigabit Ethernet 网卡经常性断网终极解决方案"></a>针对 Broadcom NetLink (TM) Gigabit Ethernet 网卡经常性断网终极解决方案</h2><p>相信很多人都会遇到升级到 win10 后经常性断网，时不时就遇见感叹号，头痛的问题，今天把我的解决方案分享出来，希望对同样是宏碁笔记本的兄地有用。</p><p>首先我们去到 Broadcom 官网【<a href="http://www.broadcom.com】，然后如下图一样搜索，下载对应网卡，我是64位所以下载" target="_blank" rel="noopener">www.broadcom.com】，然后如下图一样搜索，下载对应网卡，我是64位所以下载</a> x64。</p><p><img src="https://imgkr.cn-bj.ufileos.com/6890f404-7436-4633-aa81-16b6eca51e67.png" alt=""></p><p>下载完成解压放一边就好了。</p><p>然后，进入到设备管理器，Broadcom NetLink (TM) Gigabit Ethernet 右键点击属性。</p><p><img src="https://imgkr.cn-bj.ufileos.com/d9c99735-86c1-405e-bba6-0cbfca6861d9.png" alt=""></p><p>进入到属性窗口。</p><p><img src="https://imgkr.cn-bj.ufileos.com/9d660dfe-8604-4a3e-9374-43e03308e71e.png" alt=""></p><p>查看版本信息，如果和我一样，这个方法应该对您有用。</p><p><img src="https://imgkr.cn-bj.ufileos.com/26d15410-6402-4cf2-b050-a0626626bb30.png" alt=""></p><p>接下来就是安装更新我们刚刚下载好的网卡驱动了，一步步跟着操作就行。</p><p><img src="https://imgkr.cn-bj.ufileos.com/cce3b894-43cb-4547-b3f5-4ccdd10b7515.png" alt="step 1"></p><p><img src="https://imgkr.cn-bj.ufileos.com/17e223e2-4219-45fb-855c-07b4d6ff9c39.png" alt="step 2"></p><p><img src="https://imgkr.cn-bj.ufileos.com/95c3ec38-a778-444b-bc30-7e2762131712.png" alt="step 3"></p><p><img src="https://imgkr.cn-bj.ufileos.com/f058b628-f308-4a81-9c8e-cff6c714f776.png" alt="step 4"></p><p><img src="https://imgkr.cn-bj.ufileos.com/6c2c66a3-6f2b-430a-af1b-a80889f5428e.png" alt="step 5"></p><p><img src="https://imgkr.cn-bj.ufileos.com/7cf4ab6b-1ed0-409d-ac4e-e5b3de989b26.png" alt="step 6"></p><p><img src="https://imgkr.cn-bj.ufileos.com/87ba8e17-a4d2-4415-b2e9-efe892a65c7f.png" alt="step 7"></p><p>可以看到，已经成功更新了驱动程序，然后进入到驱动程序，可以看到版本已经是 <strong>17.2.0.2</strong> 了。</p><p><img src="https://imgkr.cn-bj.ufileos.com/66154771-11a4-4add-9897-307d382492e3.png" alt=""></p><p><strong>注意，需要重启笔记本才能生效！！</strong></p><p>最后，我们需要修改一下设备安装的默认选项，不然下次 win10 更新您还是可能会遇到同样的问题。</p><p><img src="https://imgkr.cn-bj.ufileos.com/f880ed48-d975-4217-904c-cfb6b195d50c.png" alt="step 1"></p><p><img src="https://imgkr.cn-bj.ufileos.com/3b0fbf08-f70f-4ec7-8be4-03738a52f82e.png" alt="step 2"></p><p>接下来就可以愉快的玩耍了！！！</p><h2 id="Broadcom网卡服务器或主机本地连接网卡参数优化"><a href="#Broadcom网卡服务器或主机本地连接网卡参数优化" class="headerlink" title="Broadcom网卡服务器或主机本地连接网卡参数优化"></a>Broadcom网卡服务器或主机本地连接网卡参数优化</h2><table><thead><tr><th>802.3.az EEE</th><th>Disabled</th></tr></thead><tbody><tr><td>ARP Offload</td><td>Disabled</td></tr><tr><td>Ethernet@WireSpeed</td><td>Disabled</td></tr><tr><td>Flow Control</td><td>Disabled</td></tr><tr><td>Jumbo Mtu</td><td>1500</td></tr><tr><td>Large Send Offload v2 (ipV4)</td><td>Disabled</td></tr><tr><td>Large Send Offload v2 (ipV6)</td><td>Disabled</td></tr><tr><td>Maximum Number of RSS Queue</td><td>RSS 1 Queue</td></tr><tr><td>Priority &amp; VLAN</td><td>Priority Enabled</td></tr><tr><td>LinkSpeed/Duplex</td><td>100Mbps Full Duplex</td></tr><tr><td>TCP/UDP Checksum Offload</td><td>Disabled</td></tr><tr><td>Wake on Magic packet</td><td>Disabled</td></tr><tr><td>Wake on pattern Disabled</td><td>Disabled</td></tr><tr><td>WakeOnLAN From PowerOff Disabled</td><td>Disabled</td></tr><tr><td>WOL Speed</td><td>100Mb</td></tr></tbody></table><h2 id="严格声明"><a href="#严格声明" class="headerlink" title="严格声明"></a>严格声明</h2><p><strong>本项目涉及的代码及一系列分析过程，仅用于学习交流，切勿用于任何非法用途，后果自当。</strong></p><p><strong>未经本人同意，禁止以任何形式，在任何渠道，私自转发或盗文</strong></p><hr><p><strong><span style="color:#35b378;font-weight:bold;">若你是无耻之人，也请带上小弟的文章出处链接地址，抱拳抱拳！！！</span></strong></p><blockquote><p><strong>若要转载请注明出处，尊重他人劳动成果。</strong></p></blockquote><p><strong><span style="color:orangered;font-weight:bold;">转载请注明出处链接 </span>: <span style="color:#0e88eb;font-weight:bold;"><a href="https://hongxin.online/" target="_blank" rel="noopener">https://hongxin.online/</a></span></strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题解决 </category>
+          
+          <category> win10 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+            <tag> win 10 断网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Github Pages访问太慢？通过Netlify免费加速</title>
       <link href="/2018/09/05/hexo-blog-fast/"/>
       <url>/2018/09/05/hexo-blog-fast/</url>
